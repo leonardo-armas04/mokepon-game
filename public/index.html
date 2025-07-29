@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Mokepon :D</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <section id="Seleccionar-mascota">
+            <h1 id="title">¡MOKEPON!🔥💧🌱</h1>
+            <h2 class="Subtítulo">Elige a tu mascota</h2>
+            <div id="Contenedor-tarjetas" class="Tarjetas">
+                <!-- Aquí van los mokepones que vamos a inyectar con el template literario. Aquí estaban las labels y los inputs manualmente -->
+            </div>
+            <button id="Botón-Mascota">Seleccionar</button>
+        </section>
+
+        <section id="Ver-mapa">
+            <!-- <h1 id="title">¡MOKEPON!🔥💧🌱</h1> -->
+            <h2 class="Subtítulo">Recorre el mapa con tu Mokepon 🗺</h2>
+            <canvas id="Mapa"></canvas>
+            <div id="Botones-mover">
+                <button class="Botón-mover" id="arriba" onmouseup="detenerMovimiento()" onmousedown="moverArriba()" ontouchstart="moverArriba()" ontouchend="detenerMovimiento()">⏫</button>
+                <button class="Botón-mover" id="abajo" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()" ontouchstart="moverAbajo()" ontouchend="detenerMovimiento()">⏬</button>
+                <button class="Botón-mover" id="izquierda" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" ontouchstart="moverIzquierda()" ontouchend="detenerMovimiento()">⏪</button>
+                <button class="Botón-mover" id="derecha" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()" ontouchstart="moverDerecha()" ontouchend="detenerMovimiento()">⏩</button>
+            </div>
+        </section>
+
+        <section id="Seleccionar-ataque">
+            <h1 id="title">¡MOKEPON!🔥💧🌱</h1>
+            <h2 class="Subtítulo">Elige un ataque</h2>
+            
+            <div id="Contenedor-ataques" class="Botones-ataque">
+                <!-- <button id="Botón-Fuego" class="Botón-ataque">Fuego🔥</button>
+                <button id="Botón-Awa" class="Botón-ataque">Awa 💧</button>
+                <button id="Botón-Tierra" class="Botón-ataque">Tierra 🌱</button> -->
+            </div>
+
+            <div id="Mensajes">
+                <p id="Resultado">Lets go!</p>
+            </div>
+
+            <section id="Reiniciar">
+                    <button id="Botón-reiniciar">Reiniciar</button>
+            </section>
+
+            <div class="Ataques">
+                <div id="Jugador">
+                    <p><strong>TU MASCOTA</strong></p>
+                    <p><span id="Mascota-jugador"></span> tiene <span id="Vidas-jugador">0</span> victorias</p>
+                    <div id="Ataque-jugador"></div>
+                </div>
+
+                <div id="Enemigo">
+                    <p><STrong>EL ENEMIGO</STrong></p>
+                    <p><span id="Mascota-enemigo"></span> tiene <span id="Vidas-enemigo">0</span> victorias</p>
+                    <div id="Ataque-enemigo"></div>
+                </div>
+                <!--span es para envolver un texto dinámico (que va a cambiar)-->
+            </div>
+        </section>
+        <script src="./javascript/mokepon.js"></script>
+    </body>
+</html>
